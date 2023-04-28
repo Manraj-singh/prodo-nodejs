@@ -1,3 +1,5 @@
+//THIS IS A CUSTOM MIDDLEWARE TO HANDLE ERRORS IN controllers
+
 module.exports.createError = (status, message) => {
   const err = new Error();
   err.status = status;

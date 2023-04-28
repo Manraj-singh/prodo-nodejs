@@ -1,3 +1,5 @@
+//THIS FILE CONTAINS CONFIGURATION RELATED TO MONGOOSE
+
 const mongoose = require("mongoose");
 
 //this will be DB name which will be seen in mongoDB(compass,robo3t etc)
@@ -15,7 +17,7 @@ const db = mongoose.connection;
 db.on("error", () => console.error("error while connecting to mongoDB"));
 
 db.once("open", () => {
-  console.log("connected to mongoDB");
+  console.info("connected to mongoDB");
 });
 
 module.exports = db;
