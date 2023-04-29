@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "5335d7fe-7f8d-44fa-9aea-e51ad9342a54",
+		"name": "prodo-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "get-all-categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/categories/",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-category-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/categories/644b779339090886b36ed5e0",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"categories",
+								"644b779339090886b36ed5e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"categoryB\",\r\n    \"description\":\"this is B category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/categories/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"categories",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update categories",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"updated category B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/categories/update/644c08fc6bacbf26f2ed883a",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"categories",
+								"update",
+								"644c08fc6bacbf26f2ed883a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete categories",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/categories/delete/644b779339090886b36ed5e0",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"categories",
+								"delete",
+								"644b779339090886b36ed5e0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get-all-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product-withid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/products/644bc3d44ee418c07693f898",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"products",
+								"644bc3d44ee418c07693f898"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"product6\",\r\n    \"description\":\"4 product\",\r\n   \"categoryId\":\"644b7c3382730076cdded794\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/products/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"products",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"updated product\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/products/update/644c099a6bacbf26f2ed8843",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"products",
+								"update",
+								"644c099a6bacbf26f2ed8843"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/products/delete/644bbfff3706eabd35f15400",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"products",
+								"delete",
+								"644bbfff3706eabd35f15400"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product-by-categoryId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/products/category/644b7c3382730076cdded794?limit=2&page=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"products",
+								"category",
+								"644b7c3382730076cdded794"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
