@@ -1,5 +1,5 @@
 const { createError } = require("../middlewares/error");
-const { Category } = require("../models");
+const { Category, Product } = require("../models");
 
 //below logic returns all categories
 module.exports.getAllCategories = async (req, res, next) => {
@@ -71,10 +71,12 @@ module.exports.updateCategories = async (req, res, next) => {
   }
 };
 
-//deleting category
+//deleting category , when we delete a category all products in that category will be deleted too
 module.exports.deleteCategories = async (req, res, next) => {
   try {
+    await Product.deleteMany({ categoryId: req.params.id });
     const category = await Category.findByIdAndRemove(req.params.id);
+
     res.status(200).json({
       success: true,
       message: "category deleted successfully",
